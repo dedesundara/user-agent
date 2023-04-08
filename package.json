@@ -1,0 +1,39 @@
+{
+    "name": "@dedesundara/user-agent",
+    "version": "1.0.0",
+    "description": "user-agent module",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "scripts": {
+        "dev": "ts-node-dev --respawn src/index.ts",
+        "build": "tsc",
+        "lint": "eslint . --ext .ts",
+        "prepare": "npm run build",
+        "preversion": "npm run lint",
+        "version": "git add -A src",
+        "postversion": "git push && git push --tags",
+        "check-updates": "npx npm-check-updates",
+        "check-updates:minor": "npx npm-check-updates --target minor",
+        "check-updates:patch": "npx npm-check-updates --target patch"
+    },
+    "author": "Dede Sundara",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/jest": "^29.5.0",
+        "@types/node": "^18.15.3",
+        "@typescript-eslint/eslint-plugin": "^5.55.0",
+        "@typescript-eslint/parser": "^5.55.0",
+        "ansi-regex": "^6.0.1",
+        "eslint": "^8.36.0",
+        "eslint-config-prettier": "^8.7.0",
+        "eslint-config-standard": "^17.0.0",
+        "eslint-plugin-import": "^2.27.5",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^6.1.1",
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^5.0.2"
+    },
+    "dependencies": {
+        "randexp": "^0.5.3"
+    }
+}
