@@ -12,9 +12,9 @@ const pickRandom = (list: string[] | number[]): string | number => {
 export const randomChromeVersion = {
     // all versions: https://en.wikipedia.org/wiki/Google_Chrome_version_history
     variants: {
-        major: { min: 110, max: 113 }, // periodically we should update those values
+        major: { min: 110, max: 133 }, // periodically we should update those values
         minor: { static: 0 },
-        patch: { min: 5481, max: 5563 },
+        patch: { min: 5481, max: 6834 },
         build: { min: 194, max: 226 },
     },
     version(): BrowserVersion {
@@ -38,7 +38,7 @@ export const randomChromeVersion = {
 export const randomFirefoxVersion = {
     // all versions: https://en.wikipedia.org/wiki/Firefox_version_history
     variants: {
-        major: { min: 110, max: 116 }, // periodically we should update those values
+        major: { min: 110, max: 133 }, // periodically we should update those values
         minor: { static: 0 },
         patch: { variants: ["esr"] },
     },
@@ -64,10 +64,10 @@ export const randomFirefoxVersion = {
 export const randomOperaVersion = {
     // all versions: https://en.wikipedia.org/wiki/Opera_version_history
     variants: {
-        major: { min: 96, max: 97 }, // periodically we should update those values
+        major: { min: 96, max: 115 }, // periodically we should update those values
         minor: { static: 0 },
-        patch: { min: 2889, max: 4480 },
-        build: { min: 24, max: 198 },
+        patch: { min: 2889, max: 5322 },
+        build: { min: 16, max: 198 },
     },
     version(): BrowserVersion {
         const major: number = fromRange(
@@ -121,10 +121,10 @@ export const randomSafariVersion = {
 export const randomEdgeVersion = {
     // all versions: https://docs.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel
     variants: {
-        major: { min: 110, max: 113 }, // periodically we should update those values
+        major: { min: 110, max: 131 }, // periodically we should update those values
         minor: { static: 0 },
-        patch: { min: 1462, max: 1587 },
-        build: { min: 33, max: 62 },
+        patch: { min: 1462, max: 2903 },
+        build: { min: 33, max: 112 },
     },
     version(): BrowserVersion {
         const major: number = fromRange(
